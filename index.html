@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Women's Day 20/10 🌷</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe0eb, #fff5f7);
+    color: #8d3157;
+}
+
+/* Nền trang trí */
+.background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.petal {
+    position: absolute;
+    top: -40px;
+    animation: fall linear infinite;
+    opacity: .8;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    animation: fly 5s linear forwards;
+    z-index: 10;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) scale(.7);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) scale(1.5) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* Nội dung chính */
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(900px, 92%);
+    margin: auto;
+    padding: 45px 0 35px;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid #f5a9c3;
+    border-radius: 30px;
+    background: #ffffffa8;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: #c04476;
+    animation: fadeIn 1.5s ease;
+}
+
+h1 {
+    font-size: clamp(36px, 7vw, 76px);
+    line-height: 1.2;
+    margin: 25px 0 12px;
+    background: linear-gradient(90deg, #d63384, #ff719e, #bd3980);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 2px #ffb4ce); }
+    to { filter: drop-shadow(0 0 13px #ff8bb5); }
+}
+
+.subtitle {
+    font-size: clamp(16px, 3vw, 22px);
+    color: #a34a70;
+    line-height: 1.8;
+}
+
+.flowers {
+    font-size: clamp(45px, 9vw, 85px);
+    margin: 24px 0;
+    animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+}
+
+/* Thiệp */
+.card {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 35px 28px;
+    background: #ffffffc9;
+    border: 1px solid #ffd0df;
+    border-radius: 28px;
+    box-shadow: 0 15px 50px #d65c8b20;
+    backdrop-filter: blur(10px);
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px #d65c8b35;
+}
+
+.card h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+    color: #d63384;
+}
+
+.message {
+    font-size: 17px;
+    line-height: 2;
+    color: #784258;
+    white-space: pre-line;
+}
+
+.signature {
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: #d63384;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 14px 26px;
+    margin: 8px;
+    transition: .3s;
+}
+
+.primary {
+    color: white;
+    background: linear-gradient(135deg, #ff6b9a, #d63384);
+    box-shadow: 0 8px 20px #d6338440;
+}
+
+.secondary {
+    color: #bd3977;
+    background: white;
+    border: 1px solid #f3a9c5;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    margin-top: 25px;
+    animation: fadeIn 1s ease;
+}
+
+#surprise h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+#surprise p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+    padding: 25px 0 10px;
+    font-size: 14px;
+    color: #bd7291;
+}
+
+.footer span {
+    color: #e84378;
+}
+
+@media (max-width: 500px) {
+    .container { padding-top: 30px; }
+    .card { padding: 28px 18px; }
+    .message { font-size: 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background" id="background"></div>
+
+<main class="container">
+
+    <div class="tag">20 . 10 . 2026</div>
+
+    <h1>Happy Women's Day</h1>
+
+    <p class="subtitle">
+        Chúc mừng ngày Phụ nữ Việt Nam
+        <br>
+        Một ngày thật dịu dàng dành cho những điều tuyệt vời nhất 🌸
+    </p>
+
+    <div class="flowers">🌷 🌹 💐 🌸</div>
+
+    <section class="card">
+        <h2>💌 Một chút yêu thương gửi đến bạn</h2>
+
+        <p class="message">
+Chúc bạn luôn xinh tươi như những đóa hoa,
+luôn rạng rỡ với nụ cười trên môi.
+
+Mong rằng mỗi ngày đều có niềm vui,
+mỗi hành trình đều có những điều đáng nhớ,
+và mỗi ước mơ đều có cơ hội trở thành hiện thực.
+
+Chúc bạn luôn được yêu thương,
+trân trọng và hạnh phúc theo cách riêng của mình! 💗
+        </p>
+
+        <div class="signature">
+            With love, from my heart ♡
+        </div>
+    </section>
+
+    <button class="primary" onclick="openLetter()">
+        💝 Mở món quà bí mật
+    </button>
+
+    <button class="secondary" onclick="makeHearts()">
+        💗 Gửi ngàn trái tim
+    </button>
+
+    <section id="surprise" class="card hidden">
+        <div style="font-size:55px">🎁💖🌷</div>
+        <h2>Điều ước dành riêng cho bạn</h2>
+        <p>
+            Mong bạn có đủ dịu dàng để yêu thương,
+            đủ mạnh mẽ để bước tiếp,
+            đủ tự tin để tỏa sáng
+            và đủ may mắn để gặp những điều tốt đẹp.
+
+            <br><br>
+            <strong>Ngày 20/10 thật vui vẻ nhé! 🌹</strong>
+        </p>
+    </section>
+
+    <div class="footer">
+        Made with <span>♥</span> for Women's Day · 20/10/2026
+    </div>
+
+</main>
+
+<script>
+// Tạo hoa rơi
+const bg = document.getElementById("background");
+const flowers = ["🌸", "🌷", "🌺", "💮", "✿"];
+
+for (let i = 0; i < 28; i++) {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+    petal.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (6 + Math.random() * 10) + "s";
+    petal.style.animationDelay = (-Math.random() * 15) + "s";
+    petal.style.fontSize = (14 + Math.random() * 20) + "px";
+    bg.appendChild(petal);
+}
+
+// Mở món quà
+function openLetter() {
+    const surprise = document.getElementById("surprise");
+    surprise.classList.remove("hidden");
+    surprise.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+    makeHearts();
+}
+
+// Tạo trái tim bay
+function makeHearts() {
+    const emojis = ["💗", "💖", "💕", "💝", "❤️", "🌷"];
+
+    for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent =
+                emojis[Math.floor(Math.random() * emojis.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (18 + Math.random() * 25) + "px";
+            heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 6500);
+        }, i * 100);
+    }
+}
+
+// Hiệu ứng nhẹ khi nhấn chuột
+document.addEventListener("click", function(e) {
+    if (e.target.tagName === "BUTTON") return;
+
+    const sparkle = document.createElement("div");
+    sparkle.textContent = "✨";
+    sparkle.style.position = "fixed";
+    sparkle.style.left = e.clientX + "px";
+    sparkle.style.top = e.clientY + "px";
+    sparkle.style.pointerEvents = "none";
+    sparkle.style.zIndex = "20";
+    sparkle.style.fontSize = "24px";
+    sparkle.style.animation = "fadeIn .5s ease";
+
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 700);
+});
+</script>
+
+</body>
+</html>
